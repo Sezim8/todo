@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from main.views import homepage, test, third, fourth, fifth, sixth
+from main.views import homepage, test, third, fourth, fifth, sixth, books
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -27,6 +27,7 @@ urlpatterns = [
     path("test4/", fourth, name="fourth"),
     path("test5/", fifth, name="fifth"),
     path("test6/", sixth, name="sixth"),
+    path("books/", books, name = "books"),
 
 
 
