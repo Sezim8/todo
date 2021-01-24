@@ -11,10 +11,23 @@
         <input type="text" name="title" placeholder="Заголовок"> <br> <br> <br>
         <input type="text" name="subtitle" placeholder="Подзаголовок"> <br> <br> <br>
         <input type="text" name="descripthion" placeholder="Описание"> <br> <br> <br>
+        <input type="number" name="price" placeholder="цена"> <br> <br> <br>
+        <input type="text" name="author" placeholder="автор"> <br> <br> <br>
+        <input type="datetime-local" name="year" placeholder="Год"> <br> <br> <br>
+
+        <button>Добавить</button>
+
+
        
-    
     </form>
 
+    {% for book in books%}
+    <div> <H3>{{ book.title }} - {{ book.author}} </H3>
+    
+
+    {% endfor %}
+
+    </div>
 
 </body>
 </html>
