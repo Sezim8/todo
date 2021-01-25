@@ -18,6 +18,7 @@
     <div class="title1">
         <input class="item" style="background-color: yellow;" type="text" name="title" placeholder="Заголовок" > &ensp;&ensp;
         <input class="item" style="background-color: #cbdf1e; " type="text" name="subtitle" placeholder="Подзаголовок"> &ensp;&ensp;
+        <input class="item" style="background-color: #cbdf1e; " type="text" name="genre" placeholder="Жанр"> &ensp;&ensp;
         <input class="item" style="background-color: rgb(247, 0, 255);" type="text" name="desciption" placeholder="Описание">   <br> <br> <br>
         <input class="item" style="background-color: rgb(0, 255, 255);" type="number" name="price" placeholder="цена"> &ensp;&ensp;
         <input class="item" style="background-color: rgb(0, 255, 255);" type="text" name="author" placeholder="автор"> &ensp;&ensp;
@@ -38,7 +39,7 @@
         <div class="book"> 
             <h4 > Название книги и автор: &nbsp; {{ book.title }},  {{ book.author}} </H3>
             <h4> Описание книги: &nbsp;{{book.desciption }} </h4>
-            <h4>Подзаголовок:{{book.subtitle }} </h4>
+            <h4>Подзаголовок:{{book.subtitle }}, Жанр:{{book.genre}}  </h4>
             <h4>Цена: &nbsp; {{ book.price}} сом, &ensp; дата выпуска: &nbsp; {{book.year}}  </h4>
             <hr>
             
