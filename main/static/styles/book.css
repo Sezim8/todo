@@ -6,6 +6,15 @@
 
 }
 
+
+section{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;        
+}
+
 .create_button{
     padding: 10px 35px;
     background-color: rgb(83, 14, 60);
@@ -23,6 +32,6 @@
     font-size: 12px;
 
 }
-h1{
-    font: center;
+.book{
+    margin: 10px 100px ;
 }

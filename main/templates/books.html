@@ -10,7 +10,7 @@
     
 </head>
 <body>
-  
+    <section>
     <h1 style="color: green;">Книжный магазин</h1>
     <form action="{% url 'add-book' %}"  method ="POST">
         {% csrf_token %}
@@ -27,11 +27,11 @@
         <button class="create_button">Добавить</button> <br> <br> <br>
         <hr>
     
-
+    
     </div>
 
 
-       
+    </section>   
     </form>
        
 

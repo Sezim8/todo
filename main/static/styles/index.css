@@ -104,4 +104,7 @@ section{
     margin: 0 5 px;
     cursor: pointer;
 }
+.todo_item_header h4 a{
+    text-decoration: none;
+}
 
