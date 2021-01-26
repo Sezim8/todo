@@ -76,7 +76,31 @@ def delete_book(request, id):
     return redirect (books)
 
 
-   
+
+def favorite_book(request, id):
+    book = Book.objects.get(id=id)
+    book.is_favorite = True
+    book.save()
+    return redirect (books)
+
+
+
+def mark_book(request, id):
+    book = Book.objects.get(id=id)
+    book.is_favorites = True
+    book.save()
+    return redirect (books)
+
+def unmark_book(request, id):
+    book = Book.objects.get(id=id)
+    book.is_favorites = False
+    book.save()
+    return redirect (books)
+
+#  def detail_book(request, id):
+#     book = Book.objects.get(id=id)
+#     book.save()
+#     return render(request, "books_detail.html")
 
 
 

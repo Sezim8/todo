@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books Store</title>
     <link rel="stylesheet" href="{% static 'styles/book.css'%}" />
+    <link rel="stylesheet" href="{% static 'styles/checkbox.css'%}" /> 
+    <link rel="stylesheet" href="{% static 'styles/index.css'%}" />
+    <link rel="stylesheet" href="{% static 'styles/checkbox.css'%}" /> 
    
     
 </head>
@@ -22,33 +25,33 @@
         <input class="item" style="background-color: rgb(247, 0, 255);" type="text" name="desciption" placeholder="Описание">   <br> <br> <br>
         <input class="item" style="background-color: rgb(0, 255, 255);" type="number" name="price" placeholder="цена"> &ensp;&ensp;
         <input class="item" style="background-color: rgb(0, 255, 255);" type="text" name="author" placeholder="автор"> &ensp;&ensp;
-        <input class="item" style="background-color: rgb(0, 255, 255);" type="datetime-local" name="year" placeholder="Год"> <br> <br> <br>
+        <input class="item" style="background-color: rgb(0, 255, 255);" type="datetime-local" name="year" placeholder="Год"> <br> <br> 
 
-        <button class="create_button">Добавить</button> <br> <br> <br>
+        <button class="create_button">Добавить</button> <br> <br>
         <hr>
     
     
     </div>
-
-
-    </section>   
+      
     </form>
-       
-
+   
     {% for book in books %}
-    
-        <!-- {% csrf_token %} -->
-        <div class="book"> 
+    <div class="book_container">
+        <div class="book_item"> 
 
             <h4 > Название книги и автор: &nbsp; {{ book.title }},  {{ book.author}} </H3>
             <h4> Описание книги: &nbsp;{{book.desciption }} </h4>
-            <h4>Подзаголовок:{{book.subtitle }}, Жанр:{{book.genre}}  </h4>
+            <h4>Подзаголовок:{{book.subtitle }}  </h4>
             <h4>Цена: &nbsp; {{ book.price}} сом, &ensp; дата выпуска: &nbsp; {{book.year}}  </h4>
-            <hr>
-           <a href="{% url 'delete-book' book.id %} " class="create_button2">Удалить</a>
-          
-            
-    
+            <br>
+        
+           <a href="{% url 'delete-book' book.id %} " class="create_button2">Удалить</a> &nbsp; &nbsp;
+           {%if book.is_favorites %}
+           <a href="{% url 'unmark-book' book.id %}" class="create_button3"  > <img src="{%static 'icons/желтая звезда.png' %}">Избранный</a>                        
+           {% else %}
+           <a href="{% url 'mark-book' book.id %}" class="create_button4" >Добавить в избранное</a>
+           {% endif %}    &nbsp; &nbsp;
+                                   
 
    
 
@@ -56,6 +59,7 @@
     
 
     {% endfor %}
-    
+    </div>
+    </section>  
 </body>
 </html>

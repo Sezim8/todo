@@ -8,6 +8,7 @@
 
 
 section{
+    margin:10px 0px;
     width: 100%;
     padding: 20px;
     display: flex;
@@ -15,7 +16,7 @@ section{
     align-items: center;        
 }
 
-.create_button{
+.create_button1{
     padding: 10px 35px;
     background-color: rgb(57, 207, 43);
     border: 1 px solid pink;
@@ -28,22 +29,70 @@ section{
 }
 
 .create_button2{
-    padding: 10px 35px;
-    background-color: rgb(83, 14, 60);
+    padding: 10px 30px;
+    background-color: rgb(216, 42, 42);
     border: 1 px solid pink;
     color: white;
-    font-size: 12px;
+    font-size: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.create_button3{
+    padding: 10px 30px;
+    background-color: rgb(190, 199, 66);
+    border: 1 px solid pink;
+    color: rgb(58, 34, 51);
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.create_button4{
+    padding: 10px 30px;
+    background-color: rgb(160, 124, 142);
+    border: 1 px solid rgb(31, 29, 29);
+    color: rgb(15, 1, 11);
+    font-size: 9px;
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 3px;
     cursor: pointer;
 }
 
-.item{
-    padding: 10px 35px;
-    font-size: 12px;
 
+
+
+ .item{
+    padding: 10px 35px;
+    font-size: 12px; 
+
+ } 
+
+
+.book_item{
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 45%;
+    padding: 10px 15px;
+    background-color: #c8e6c9;
+    margin-bottom: 20px;
 }
-.book{
-    margin: 10px 100px ;
+
+.book_container{
+    padding: 30px 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+img{
+    width: 25px;
+    height: 25px;
+    margin: 0 5 px;
+
+
 }
