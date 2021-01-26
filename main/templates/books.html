@@ -36,19 +36,26 @@
        
 
     {% for book in books %}
+    
+        <!-- {% csrf_token %} -->
         <div class="book"> 
+
             <h4 > Название книги и автор: &nbsp; {{ book.title }},  {{ book.author}} </H3>
             <h4> Описание книги: &nbsp;{{book.desciption }} </h4>
             <h4>Подзаголовок:{{book.subtitle }}, Жанр:{{book.genre}}  </h4>
             <h4>Цена: &nbsp; {{ book.price}} сом, &ensp; дата выпуска: &nbsp; {{book.year}}  </h4>
             <hr>
+           <a href="{% url 'delete-book' book.id %} " class="create_button2">Удалить</a>
+          
             
     
 
    
 
         </div>
-    {% endfor %}
+    
 
+    {% endfor %}
+    
 </body>
 </html>

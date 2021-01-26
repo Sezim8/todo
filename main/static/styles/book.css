@@ -17,6 +17,18 @@ section{
 
 .create_button{
     padding: 10px 35px;
+    background-color: rgb(57, 207, 43);
+    border: 1 px solid pink;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.create_button2{
+    padding: 10px 35px;
     background-color: rgb(83, 14, 60);
     border: 1 px solid pink;
     color: white;

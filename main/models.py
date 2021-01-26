@@ -16,4 +16,5 @@ class Book(models.Model):
     genre = models.TextField(null=True)
     author = models.CharField(max_length=100)
     year = models.DateField()
+    is_favorites = models.BooleanField(default=False)
    
