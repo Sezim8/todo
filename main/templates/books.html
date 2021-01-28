@@ -14,7 +14,7 @@
 </head>
 <body>
     <section>
-    <h1 style="color: green;">Книжный магазин</h1>
+    <h1 style="color: green;">Книжный магазин</h1> <br> <br>
     <form action="{% url 'add-book' %}"  method ="POST">
         {% csrf_token %}
 
@@ -27,8 +27,9 @@
         <input class="item" style="background-color: rgb(0, 255, 255);" type="text" name="author" placeholder="автор"> &ensp;&ensp;
         <input class="item" style="background-color: rgb(0, 255, 255);" type="datetime-local" name="year" placeholder="Год"> <br> <br> 
 
-        <button class="create_button">Добавить</button> <br> <br>
+        <button class="create_button1">Добавить</button> <br> <br>
         <hr>
+        <br> <br>
     
     
     </div>
@@ -36,8 +37,13 @@
     </form>
    
     {% for book in books %}
-    <div class="book_container">
-        <div class="book_item"> 
+        <div class="book_item
+        {% if book.is_favorites %}
+             marked    
+  
+        {% endif %}
+          
+">
 
             <h4 > Название книги и автор: &nbsp; {{ book.title }},  {{ book.author}} </H3>
             <h4> Описание книги: &nbsp;{{book.desciption }} </h4>
@@ -47,10 +53,13 @@
         
            <a href="{% url 'delete-book' book.id %} " class="create_button2">Удалить</a> &nbsp; &nbsp;
            {%if book.is_favorites %}
+               
            <a href="{% url 'unmark-book' book.id %}" class="create_button3"  > <img src="{%static 'icons/желтая звезда.png' %}">Избранный</a>                        
            {% else %}
            <a href="{% url 'mark-book' book.id %}" class="create_button4" >Добавить в избранное</a>
            {% endif %}    &nbsp; &nbsp;
+
+           <a href="{% url 'detail-book' book.id %}" class="button_detail">Подробнее</a>
                                    
 
    

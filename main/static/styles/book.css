@@ -16,12 +16,16 @@ section{
     align-items: center;        
 }
 
+h1{
+    font-size: 50px;
+}
+
 .create_button1{
     padding: 10px 35px;
-    background-color: rgb(57, 207, 43);
+    background-color: rgb(41, 20, 34);
     border: 1 px solid pink;
     color: white;
-    font-size: 12px;
+    font-size: 11px;
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 3px;
@@ -58,10 +62,21 @@ section{
     font-size: 9px;
     text-transform: uppercase;
     font-weight: bold;
-    border-radius: 3px;
+    border-radius: 15px;
     cursor: pointer;
 }
 
+.button_detail{
+    padding: 10px 30px;
+    background-color: rgb(43, 19, 129);
+    border: 1 px solid rgb(31, 29, 29);
+    color:white;
+    font-size: 9px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+}
 
 
 
@@ -75,7 +90,7 @@ section{
 .book_item{
     border: 1px solid gray;
     border-radius: 5px;
-    width: 45%;
+    width: 40%;
     padding: 10px 15px;
     background-color: #c8e6c9;
     margin-bottom: 20px;
@@ -96,3 +111,14 @@ img{
 
 
 }
+
+.book_item.marked {
+    border: 1px solid rgb(211, 81, 29);
+    border-radius: 10px;
+    width: 40%;
+    padding: 10px 15px;
+    background-color: #ddf31a;
+    margin-bottom: 20px;
+}
+
+

@@ -97,10 +97,10 @@ def unmark_book(request, id):
     book.save()
     return redirect (books)
 
-#  def detail_book(request, id):
-#     book = Book.objects.get(id=id)
-#     book.save()
-#     return render(request, "books_detail.html")
+def BooksDetail(request, id):
+    book = Book.objects.get(id=id)
+    book.save()
+    return render(request, "books_detail.html")
 
 
 
